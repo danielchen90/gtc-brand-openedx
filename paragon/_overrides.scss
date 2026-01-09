@@ -1,2 +1,177 @@
-// Use this file to define style overrides for @edx/paragon
+// Mary Banks Global Training Center - Custom Style Overrides
 // This file is included after all Paragon styles, but should generally avoid using private mixins in Paragon.
+
+// ========================================
+// Global Styles
+// ========================================
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #171717;
+}
+
+// ========================================
+// Header Customization
+// ========================================
+
+.learner-variant-header,
+.studio-header,
+#root .learner-variant-header {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+
+  .nav-link {
+    color: #171717 !important;
+
+    &:hover {
+      color: #EAB308 !important;
+    }
+  }
+
+  .btn-primary {
+    background-color: #EAB308 !important;
+    border-color: #EAB308 !important;
+    color: #171717 !important;
+    font-weight: 600 !important;
+
+    &:hover {
+      background-color: #CA9A06 !important;
+      border-color: #CA9A06 !important;
+    }
+  }
+}
+
+// ========================================
+// Buttons
+// ========================================
+
+.btn-primary {
+  background-color: #EAB308;
+  border-color: #EAB308;
+  color: #171717;
+  border-radius: 0.5rem;
+  font-weight: 600;
+
+  &:hover,
+  &:focus {
+    background-color: #CA9A06;
+    border-color: #CA9A06;
+    color: #171717;
+  }
+
+  &:active {
+    background-color: #a16207;
+    border-color: #a16207;
+  }
+}
+
+.btn-outline-primary {
+  border-color: #EAB308;
+  color: #EAB308;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: #EAB308;
+    border-color: #EAB308;
+    color: #171717;
+  }
+}
+
+.btn-secondary {
+  background-color: #f5f5f5;
+  border-color: #e5e5e5;
+  color: #171717;
+
+  &:hover,
+  &:focus {
+    background-color: #e5e5e5;
+    border-color: #d4d4d4;
+  }
+}
+
+// ========================================
+// Links
+// ========================================
+
+a {
+  color: #EAB308;
+  text-decoration: none;
+
+  &:hover {
+    color: #CA9A06;
+    text-decoration: underline;
+  }
+}
+
+// ========================================
+// Cards
+// ========================================
+
+.card {
+  border-radius: 0.5rem;
+  border-color: #e5e5e5;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+
+  .card-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+  }
+}
+
+// ========================================
+// Forms
+// ========================================
+
+.form-control {
+  border-radius: 0.5rem;
+  border-color: #e5e5e5;
+
+  &:focus {
+    border-color: #EAB308;
+    box-shadow: 0 0 0 0.2rem rgba(234, 179, 8, 0.25);
+  }
+}
+
+.form-label {
+  font-weight: 500;
+  color: #171717;
+}
+
+// ========================================
+// Profile Page
+// ========================================
+
+.profile-page {
+  .profile-avatar {
+    border: 2px solid #e5e5e5;
+  }
+
+  .profile-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+  }
+}
+
+// ========================================
+// Course Cards
+// ========================================
+
+.course-card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .course-card-title {
+    color: #171717;
+    font-weight: 600;
+  }
+}

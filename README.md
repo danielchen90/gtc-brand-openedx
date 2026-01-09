@@ -1,68 +1,87 @@
-# Open edX Brand Package Interface
+# Mary Banks Global Training Center - Brand Package
 
-This project contains the default branding assets and style used in Open edX
-applications. It is published on npm as `@openedx/brand-openedx`.
+Custom branding package for Open edX MFEs (Micro-Frontends) for Mary Banks Global Training Center.
 
-The file structure serves as an interface to be implemented for custom
-branding and theming of Open edX.
+## 🎨 Brand Identity
 
-## How to use this package
+**Organization:** Mary Banks Global Training Center
+**Tagline:** Transform your calling into powerful ministry impact
+**Primary Color:** #EAB308 (Gold)
+**Secondary Color:** #f5f5f5 (Light gray)
+**Font:** Arial, Helvetica, sans-serif
 
-Applications in Open edX are configured by default to include this
-package for branding assets and theming visual style.
+## 📦 Package Contents
 
-To use a custom brand and theme\...
+```
+gtc-brand-openedx/
+├── package.json              # NPM package configuration
+├── logo.png                  # GTC logo (main)
+├── logo-white.png            # GTC logo (white version)
+├── favicon.ico               # Browser favicon
+├── paragon/
+│   ├── _variables.scss       # SCSS variables (colors, fonts, spacing)
+│   ├── _overrides.scss       # Component style overrides
+│   ├── core.scss             # Core styles
+│   └── tokens/               # Design tokens
+└── README.md                 # This file
+```
 
-1.  Fork or copy this project. Ensure that it lives in a location
-    accessible to Open edX applications during asset builds. This may be
-    a published git repo, npm, or local folder depending on your
-    situation.
-2.  Replace the assets in this project with your own logos or SASS
-    theme. Match the filenames exactly. Open edX applications refer to
-    these files by their filepath. Refer to the brand for edx.org at
-    <https://github.com/edx/brand> for an example.
+## 🚀 Usage
 
-    If you are working with Design tokens and CSS varibles please follow the guide 
-    [Paragon Design Tokens Compatibility](./docs/how-to/design-tokens-support.rst)
+This package is automatically installed in Open edX MFEs via the Tutor plugin `tutor-contrib-gtc-branding`.
 
-3.  Configure your Open edX instance to consume your custom brand
-    package. Refer to this documentation on configuring the platform:
-    https://docs.openedx.org/projects/openedx-proposals/en/latest/architectural-decisions/oep-0048-brand-customization.html
-    \[TODO: Add a link to documentation on configuring in Open edX MFE
-    pipelines when it exists\]
-4.  Rebuild the assets and microfrontends in your Open edX instance to
-    see the new brand reflected. \[TODO: Add link to relevant
-    documentation when it is completed\].
+### Installation in MFE
 
-## Files this package must make available
+```bash
+npm install '@edx/brand@git+https://github.com/YOUR_USERNAME/gtc-brand-openedx.git'
+```
 
-`/logo.svg`
+MFEs will automatically detect and use this package for branding.
 
-![logo](/logo.svg)
+## 🎨 Customization
 
-`/logo-trademark.svg` A variant of the logo with a trademark ® or ™.
-Note: This file must be present. If you don\'t have a trademark variant
-of your logo, copy your regular logo and use that.
+### Colors
 
-![logo](/logo-trademark.svg)
+Edit `paragon/_variables.scss` to change colors, fonts, spacing, etc.
 
-`/logo-white.svg` A variant of the logo for use on dark backgrounds
+### Component Styles
 
-![logo](/logo-white.svg)
+Edit `paragon/_overrides.scss` to override specific component styles.
 
-`/favicon.ico` A site favicon
+## 🔧 Development
 
-![favicon](/favicon.ico)
+```bash
+npm run build          # Build all
+npm run build:watch    # Watch mode
+```
 
-`/paragon/images/card-imagecap-fallback.png` A variant of the default
-fallback image for [Card.ImageCap] component.
+## 📝 Making Changes
 
-![card-imagecap-fallback](/paragon/images/card-imagecap-fallback.png)
+1. Edit files in `paragon/` directory
+2. Commit and push to GitHub
+3. Rebuild MFE images on server:
+   ```bash
+   sudo tutor images build --no-cache mfe
+   sudo tutor local restart mfe
+   ```
 
-`/paragon/fonts.scss`, `/paragon/_variables.scss`,
-`/paragon/_overrides.scss` A SASS theme for
-[\@edx/paragon](https://github.com/openedx/paragon). Theming
-documentation in Paragon is coming soon. In the meantime, you can start
-a theme by the contents of [\_variables.scss (after line
-7)](https://github.com/openedx/paragon/blob/master/scss/core/_variables.scss#L7-L1046)
-file from the Paragon repository into this file.
+## 🌈 Color Palette
+
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Primary Gold | `#EAB308` | Buttons, accents, links |
+| Gold Hover | `#CA9A06` | Button hover states |
+| Dark Text | `#171717` | Text on light/gold backgrounds |
+| Secondary | `#f5f5f5` | Backgrounds, secondary elements |
+| Border | `#e5e5e5` | Borders, dividers |
+| Error | `#dc2626` | Error messages |
+| Success | `#16a34a` | Success messages |
+
+## 📞 Support
+
+**Contact:** daniel@mbmonline.global  
+**Website:** https://mbmonline.global
+
+## 📄 License
+
+Proprietary to Mary Banks Global Training Center.

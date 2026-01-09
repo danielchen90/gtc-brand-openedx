@@ -1,2 +1,109 @@
-// Use this file to set SASS variables for @edx/paragon
+// Mary Banks Global Training Center - Custom Brand Variables
 // See _variables.scss in https://github.com/openedx/paragon/blob/master/scss/core/ for reference
+
+// ========================================
+// Brand Colors
+// ========================================
+
+// Primary brand color - Gold
+$primary: #EAB308 !default;  // Gold
+$primary-100: #fef9c3 !default;  // Lightest gold
+$primary-200: #fef08a !default;
+$primary-300: #fde047 !default;
+$primary-400: #facc15 !default;
+$primary-500: #EAB308 !default;  // Main gold
+$primary-600: #CA9A06 !default;  // Darker gold (hover)
+$primary-700: #a16207 !default;
+$primary-800: #854d0e !default;
+$primary-900: #713f12 !default;  // Darkest gold
+
+// Secondary color - Light gray for backgrounds
+$secondary: #f5f5f5 !default;  // HSL(0, 0%, 96.1%)
+
+// Accent colors
+$accent: #f5f5f5 !default;
+$muted: #f5f5f5 !default;
+
+// Text colors
+$text-primary: #171717 !default;  // Dark text for use on light/gold backgrounds
+$text-secondary: #525252 !default;
+$text-muted: #737373 !default;
+
+// Destructive/Error color
+$destructive: #dc2626 !default;  // HSL(0, 84.2%, 60.2%)
+
+// Success color
+$success: #16a34a !default;
+
+// Warning color
+$warning: #ea580c !default;
+
+// Info color
+$info: #0284c7 !default;
+
+// ========================================
+// Typography
+// ========================================
+
+// Font families
+$font-family-sans-serif: Arial, Helvetica, sans-serif !default;
+$font-family-base: $font-family-sans-serif !default;
+
+// Font sizes
+$font-size-base: 1rem !default;
+$h1-font-size: 2.5rem !default;
+$h2-font-size: 2rem !default;
+$h3-font-size: 1.75rem !default;
+$h4-font-size: 1.5rem !default;
+$h5-font-size: 1.25rem !default;
+$h6-font-size: 1rem !default;
+
+// ========================================
+// Spacing & Layout
+// ========================================
+
+// Border radius
+$border-radius: 0.5rem !default;
+$border-radius-sm: calc($border-radius - 2px) !default;
+$border-radius-lg: $border-radius !default;
+
+// Borders
+$border-color: #e5e5e5 !default;  // HSL(0, 0%, 89.8%)
+$border-width: 1px !default;
+
+// ========================================
+// Component Overrides
+// ========================================
+
+// Buttons
+$btn-border-radius: $border-radius !default;
+$btn-border-radius-sm: $border-radius-sm !default;
+$btn-border-radius-lg: $border-radius-lg !default;
+
+// Cards
+$card-border-radius: $border-radius !default;
+$card-border-color: $border-color !default;
+
+// Inputs
+$input-border-radius: $border-radius !default;
+$input-border-color: $border-color !default;
+$input-bg: #ffffff !default;
+
+// ========================================
+// Header & Navigation
+// ========================================
+
+// Header colors
+$header-bg: #ffffff !default;
+$header-text-color: $primary !default;
+$header-link-color: $primary !default;
+$header-link-hover-color: $primary-700 !default;
+
+// ========================================
+// Footer
+// ========================================
+
+$footer-bg: $primary !default;
+$footer-text-color: #ffffff !default;
+$footer-link-color: #ffffff !default;
+$footer-link-hover-color: $primary-300 !default;
